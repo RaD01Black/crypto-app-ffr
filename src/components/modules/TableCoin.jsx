@@ -1,3 +1,5 @@
+import { RotatingLines } from "react-loader-spinner"
+
 import chartUp from "../../assets/chart-up.svg"
 import chartDown from "../../assets/chart-down.svg"
 
@@ -6,7 +8,7 @@ function TableCoin({ coins, isLoading }) {
     console.log(coins)
   return (
     <div>
-      {isLoading ? <p>loading ... </p> : (<table>
+      {isLoading ? (<RotatingLines strokeColor="#3874ff" strokeWidth="2" />) : (<table>
         <thead>
           <tr>
             <th>Coin</th>
