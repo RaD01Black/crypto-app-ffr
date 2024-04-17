@@ -2,11 +2,11 @@ import chartUp from "../../assets/chart-up.svg"
 import chartDown from "../../assets/chart-down.svg"
 
 
-function TableCoin({ coins }) {
+function TableCoin({ coins, isLoading }) {
     console.log(coins)
   return (
     <div>
-      <table>
+      {isLoading ? <p>loading ... </p> : (<table>
         <thead>
           <tr>
             <th>Coin</th>
@@ -22,8 +22,9 @@ function TableCoin({ coins }) {
             <TableRow coin={coin} key={coin.id} />
           ))}
         </tbody>
-      </table>
-       </div>
+      </table>)}
+
+    </div>
   )
 }
 
