@@ -42,7 +42,7 @@ const TableRow = ({ coin: {
   total_volume,
   current_price,
   price_change_percentage_24h: price_change,
-},setCurrency
+},
  }) => {
   return (
     <tr>
