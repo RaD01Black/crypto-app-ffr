@@ -49,6 +49,7 @@ function Search({currency, setCurrency}) {
             <option value="eur">EUR</option>
             <option value="jpy">JPY</option>
         </select>
+        {(!!coins.length || isLoading) && (
         <div className={styles.searchResult}>
             {isLoading && <RotatingLines width="50px" height="50px" strokeColor="#3874ff" strokeWidth="2" />}
             <ul>{coins.map((coin) => (<li key={coin.id}>
@@ -56,6 +57,7 @@ function Search({currency, setCurrency}) {
                 <p>{coin.name}</p>
             </li>))}</ul>
         </div>
+        )}
     </div>
   )
 }
