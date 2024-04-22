@@ -4,6 +4,7 @@ import chartUp from "../../assets/chart-up.svg"
 import chartDown from "../../assets/chart-down.svg"
 
 import styles from "./TableCoin.module.css"
+import { marketChart } from "../../services/cryptoApi"
 
 
 function TableCoin({ coins, isLoading, setChart,currency }) {
@@ -36,6 +37,7 @@ function TableCoin({ coins, isLoading, setChart,currency }) {
 export default TableCoin
 
 const TableRow = ({ coin: {
+  id,
   name,
   image,
   symbol,
@@ -45,8 +47,14 @@ const TableRow = ({ coin: {
 },
 setChart,currency
  }) => {
-  const showHandler = () => {
-    setChart(true);
+  const showHandler =  async () => {
+    try {
+      const res = await fetch(marketChart(id));
+      const json = await res.json();
+      setChart(json);
+    } catch (error) {
+      setChart(null);
+    }
   };
   return (
     <tr>
