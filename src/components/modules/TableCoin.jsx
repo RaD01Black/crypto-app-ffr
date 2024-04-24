@@ -8,7 +8,6 @@ import { marketChart } from "../../services/cryptoApi"
 
 
 function TableCoin({ coins, isLoading, setChart,currency }) {
-    console.log(coins)
   return (
     <div className={styles.container}>
       {isLoading ? (<RotatingLines strokeColor="#3874ff" strokeWidth="2" />) : (
