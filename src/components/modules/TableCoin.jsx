@@ -1,10 +1,10 @@
-import { RotatingLines } from "react-loader-spinner"
+import { RotatingLines } from "react-loader-spinner";
 
-import chartUp from "../../assets/chart-up.svg"
-import chartDown from "../../assets/chart-down.svg"
+import chartUp from "../../assets/chart-up.svg";
+import chartDown from "../../assets/chart-down.svg";
 
-import styles from "./TableCoin.module.css"
-import { marketChart } from "../../services/cryptoApi"
+import styles from "./TableCoin.module.css";
+import { marketChart } from "../../services/cryptoApi";
 
 
 function TableCoin({ coins, isLoading, setChart,currency }) {
@@ -30,10 +30,10 @@ function TableCoin({ coins, isLoading, setChart,currency }) {
       </table>)}
 
     </div>
-  )
-}
+  );
+};
 
-export default TableCoin
+export default TableCoin;
 
 const TableRow = ({ coin,
 setChart,currency
@@ -71,5 +71,5 @@ setChart,currency
             <td>{total_volume.toLocaleString()}</td>
             <td><img src={price_change > 0 ? chartUp : chartDown} alt={name} /></td>
           </tr>
-  )
-}
+  );
+};

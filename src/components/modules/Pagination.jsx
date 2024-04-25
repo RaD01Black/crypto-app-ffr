@@ -1,4 +1,4 @@
-import styles from "./Pagination.module.css"
+import styles from "./Pagination.module.css";
 
 function Pagination({page, setPage}) {
   const previousHandler = ()  => {
@@ -27,7 +27,7 @@ function Pagination({page, setPage}) {
     <p className={page === 10 ? styles.selected : null}>10</p>
     <button onClick={nextHandler} className={page === 10 ? styles.disabled : null }>next</button>
     </div>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

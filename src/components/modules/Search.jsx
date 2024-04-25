@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useState } from "react"
+import { useState } from "react";
 import { searchCoin } from "../../services/cryptoApi";
 import { RotatingLines } from "react-loader-spinner";
 import styles from "./Search.module.css";
@@ -58,7 +58,7 @@ function Search({currency, setCurrency}) {
         </div>
         )}
     </div>
-  )
-}
+  );
+};
 
 export default Search

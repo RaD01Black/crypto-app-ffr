@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from "react";
 import styles from "./chart.module.css"
-import { convertData } from "../../helpers/convertData"
-import { CartesianGrid, ResponsiveContainer, LineChart, Line, YAxis, XAxis, Tooltip, Legend  } from "recharts"
+import { convertData } from "../../helpers/convertData";
+import { CartesianGrid, ResponsiveContainer, LineChart, Line, YAxis, XAxis, Tooltip, Legend  } from "recharts";
 
 function Chart({ chart, setChart }) {
     const [type, setType] = useState("prices");
@@ -10,8 +10,8 @@ function Chart({ chart, setChart }) {
       if (event.target.tagName === "BUTTON") {
         const type = event.target.innerText.toLowerCase().replace(" ", "_");
         setType(type)
-      }
-    }
+      };
+    };
   return (
     <div className={styles.container}>
         <span className={styles.cross} onClick={() => setChart(null)}>X</span>
@@ -44,8 +44,8 @@ function Chart({ chart, setChart }) {
           </div>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default Chart
 
